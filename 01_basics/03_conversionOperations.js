@@ -83,4 +83,35 @@ let strcon = String(condition)
 let var1 = undefined
 let val2 = String(var1)
 
-console.table([var1 , typeof var1 , val2 , typeof val2])
+// console.table([var1 , typeof var1 , val2 , typeof val2])
+
+//  ************************************** operations **************************************************************************
+
+// console.table([2+2,2-2,2*2,2**3,2/4,2%3]) arithmetic
+
+// console.log(1||0) logical
+
+
+
+// console.log(1+2+"2"+4) string conversion
+// console.log(1+"2"+2)
+// console.log("1"+2+2)
+
+// console.log(3+4*2%5) precedence
+
+
+// console.log(+true); + operator is used to convert to number
+// console.log(+false);
+// console.log(+null);
+// console.log(+undefined);
+// console.log(+"");
+// console.log(+"33");
+// console.log(+"pratik");
+
+//  postfix and prefix
+
+let gamecounter = 100
+
+// console.log(gamecounter++);
+// console.log(gamecounter);
+// console.log(++gamecounter);
