@@ -45,3 +45,10 @@ let quote = "life is good , enjoy it."
 console.log(quote.substring(0));
 console.log(quote.slice(0));
 
+// let name = "pratik"
+let sirname = "jagtap"
+let bdate = 4
+
+let fullname = name.concat(" ", sirname , " " , bdate)
+console.log(name);
+console.log(fullname);
