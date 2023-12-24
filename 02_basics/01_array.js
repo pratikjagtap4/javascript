@@ -44,13 +44,17 @@ let newarray = myarray.join()
 // slice and splice
 
 const array = new Array(1,2,3,4,5)
-console.log("A", array)
+// console.log("A", array)
 
 let newArray = array.slice(1,3)
-console.log(newArray)
-console.log("B", array)
+// console.log(newArray)
+// console.log("B", array)
 
 let mynewarray = array.splice(1,3)
-console.log(mynewarray)
-console.log("C",array)
+// console.log(mynewarray)
+// console.log("C",array)
 
+const score = [ 1,2,3,4,5]
+score.shift()
+// console.log(score)
+// console.log(score[0]);
