@@ -9,8 +9,15 @@ while (i<=20) {
 
 const arr = ["pratik", "dhananjay", "swapnil", "tushar","yash","raj","sagar","anurag","prem"]
 
-let index = 0
+console.log(arr);
+// let newname = arr.pop()
+// console.log(arr);
+// console.log(newname);
 
+
+
+
+let index = 0;
 while(index < arr.length)
 {
     // console.log(`hi,  my name is ${arr[index]}`);
@@ -18,10 +25,14 @@ while(index < arr.length)
     index++
 }
 
+// console.log(arr);
+
+
 // do while loop
 
 let score = 11
 
 do{
-    console.log(`Score is ${score}`);
+    // console.log(`Score is ${score}`);
 } while(score<=10)
+
