@@ -49,3 +49,16 @@ userBooks = books.filter( (bk) => {
 })
 
 console.log(userBooks);
+
+
+
+const fruits =["apple","banana","ananas","orange","grapes"]
+
+function filteritems(arr, query)
+{
+    return arr.filter( (element) => {
+        return element.toLowerCase().includes(query.toLowerCase())
+    })
+}
+
+console.log(filteritems(fruits,"ap"));
