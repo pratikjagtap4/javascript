@@ -48,7 +48,8 @@ let instaid = "pratik"
 
 let username = instaid
 // console.log(username)
-username = "jagtap"
+// username = "jagtap"
+instaid = "jagtap"
 
 // console.log(instaid)
 // console.log(username)
