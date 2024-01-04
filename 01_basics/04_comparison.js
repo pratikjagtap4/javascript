@@ -2,6 +2,7 @@
 
 // console.log(5>"7")
 // console.log("4b">6)
+// console.log("2"==2);
 
 // console.log(null>0)
 // console.log(null==0)
