@@ -47,6 +47,7 @@ myfunction()
 let instaid = "pratik"
 
 let username = instaid
+// console.log(username)
 username = "jagtap"
 
 // console.log(instaid)
