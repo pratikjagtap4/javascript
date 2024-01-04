@@ -69,3 +69,7 @@ object2.name =  "jagtap"
 // console.log(object.name)
 // console.log(object2.name)
 
+let string1 = "a"
+let string2 ="A"
+
+// console.log(string1>string2);
