@@ -9,8 +9,18 @@ const username = new String("pratiiik4")
 // console.log(username.length)
 // console.log(username.toLowerCase())
 // console.log(username.toUpperCase())
-// console.log(username.charAt(2))
+// console.log(username.charAt(-1))
+// console.log(username.at(-1))
+// console.log(name[-1]);
 // console.log(username.indexOf('i'))
+
+const myname = "hello pratik2 pratik3 pratik4"
+// const substr = "pratik"
+const searchitem = myname.indexOf("");
+// console.log(myname.length);
+// console.log(myname.indexOf("pratik",23));
+
+//  console.log(myname.indexOf(substr, searchitem + 1)); returns 2nd occurrence pf specified string
 
 let newname = username.substring(2,5)
 // console.log(newname)
@@ -30,6 +40,7 @@ let string2 = newstring.trimEnd()
 
 let url = "https://pratikjagtap/linkedIn%20#50profile"
 let url2 = url.replace("%20#50", "-")
+
 // console.log(url);
 // console.log(url2)
 // console.log(url.includes("shivam"));
@@ -42,13 +53,21 @@ let quote = "life is good , enjoy it."
 // console.log(quote.lastIndexOf("i"))
 
 // console.log(quote.substr(0,5));
-console.log(quote.substring(0));
-console.log(quote.slice(0));
+// console.log(quote.substring(0));
+// console.log(quote.slice(0));
 
 // let name = "pratik"
 let sirname = "jagtap"
 let bdate = 4
 
 let fullname = name.concat(" ", sirname , " " , bdate)
-console.log(name);
-console.log(fullname);
+// console.log(name);
+// console.log(fullname);
+
+// console.log("".concat({}))
+
+
+const str = "hello.world.hello.world "
+const match = "%"
+const str2 = str.replaceAll(".","-")
+console.log(str2)
