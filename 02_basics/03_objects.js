@@ -33,11 +33,73 @@ const myObject = {
 // console.log(myObject);
 
 myObject.greeting = function(){
-    console.log("Hello Js user")
+    // console.log("Hello Js user")
 }
 myObject.greetingTwo = function(){
-    console.log(`Hello Js user, ${this.name}`)
+    // console.log(`Hello Js user, ${this.name}`)
 }
 
-console.log(myObject.greeting())
-console.log(myObject.greetingTwo())
+// console.log(myObject.greeting())
+// console.log(myObject.greetingTwo())
+
+const dynamicKey = "keyname"
+const symVal = Symbol("hello")
+
+const object1 = {
+    name1: "pratik",
+    age_year:22,
+    [symVal]:"pratik@44",
+    3 : "any number",
+    " ": "Empty String",
+    rand : Math.random(),
+    arr : [1,2,3,4],
+    obj : {college:"Aissms",uni:"SPPU"},
+    myFun : function() {
+        console.log(`${this.name}`)
+    },
+    keyname : "value for dynamic key",
+    "sir-name" : "jagtap"
+}
+
+console.log(object1.name1)
+console.log(object1["name1"])
+
+
+console.log(object1.age_year)
+console.log(object1["age_year"])
+
+
+console.log(object1.symVal)
+console.log(object1[symVal])
+
+
+// console.log(object1.3)
+console.log(object1["3"])
+
+
+// console.log(object1." ")
+console.log(object1[" "])
+
+
+console.log(object1.rand)
+console.log(object1["rand"])
+
+
+console.log(object1.arr)
+console.log(object1["arr"])
+
+
+console.log(object1["obj"])
+console.log(object1.obj)
+
+
+console.log(object1.myFun())
+console.log(object1["myFun()"])
+
+
+console.log(object1.dynamicKey)
+console.log(object1[dynamicKey])
+
+
+// console.log(object1.sir-name)
+console.log(object1["sir-name"])
