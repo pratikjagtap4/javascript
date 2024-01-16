@@ -49,3 +49,27 @@ let score1=100, score2= 200, score3=300
 
 const marks = Array.of(score1,score2,score3)
 console.log(marks);
+
+// ****************************************
+
+const array2 = [1, 2, [3,4,5 ]];
+
+// Create a shallow copy of array1
+const shallowCopy = [...array2]; // spread opertaor creates a shallow copies
+
+// Modify an element in the shallow copy
+shallowCopy[2][2] = 99;
+// array2[2] = 99
+
+// console.log(array2);         // [1, 2, [3,4,99]
+// console.log(shallowCopy);    // [1, 2, [ 3,4, 99 ]] 
+
+
+const arr = ["partik","swapnil","dhananjay","tushar","yash","anurag","sagnik"]
+// const copied = arr.copyWithin(0,4)
+const copied = Array.from(arr).reverse()
+
+copied[2] ="jagtap"
+
+console.log(copied)
+console.log(arr)
