@@ -43,13 +43,13 @@ if(true)
 
 // **************************************** hoisting ********************************
 
-// console.log(add(5))
+console.log(add(5))
 function add(num){
     return num+1
 }
 
 // console.log(two(5));
-var two = function(num){
+two = function(num){
     return num+2
 }
 
@@ -59,4 +59,16 @@ let num = 10
 
 console.log(val);
 var val=10
+
+
+// *************************** lexical scope**************
+
+function minus (){
+    var b = 50
+    // console.log("inner b:",b)
+    
+}
+// minus()
+// console.log("outer b:",b)
+
 
