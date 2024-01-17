@@ -12,3 +12,10 @@ const addition = (num1,num2) => {
 }
 
 console.log(addition(7,8))
+
+
+(function fun(num1, num2){
+    console.log(num1 + num2);
+})(4,5);
+
+fun(10,20)
