@@ -57,3 +57,23 @@ for (const i in map)
     // console.log(i);     for in looop does not work with map
 
 }
+
+
+const parentObject = {
+    prop1:"property of parent object",
+    prop4:"helloooo"
+
+}
+
+const childObject = Object.create(parentObject)
+childObject.prop2 = "property of child"
+childObject.prop3 = "pratik"
+childObject.prop4 = "jagtap"
+
+// console.log(childObject.prop1)
+for (const key in childObject) {
+    if(Object.hasOwn(childObject , key)){
+
+        console.log([key])
+    }
+}
