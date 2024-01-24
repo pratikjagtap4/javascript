@@ -64,7 +64,7 @@ if(loggedInFromEmail || loggedInFromGoogle){
 // let val1 = 10 ?? 20
 // let val1 = null ?? undefined
 let val1 = null ?? undefined ?? 20
-// console.log(val1);
+console.log(val1);
 
 // ternary operator
 
@@ -72,4 +72,4 @@ let val1 = null ?? undefined ?? 20
 
 const price =100
 
-price > 80 ? console.log("greater than 80"):console.log("less than 80");;
+// price > 80 ? console.log("greater than 80"):console.log("less than 80");;
