@@ -38,3 +38,40 @@ const myobj ={
 // for (const key of myobj) {
 //     // console.log(key);
 // }
+
+
+const array = [ 1,2,3,4,5,6]
+
+for (let i of array) {
+    i = i+1
+
+    // console.log(i)    
+}
+
+const myMap = new Map
+
+myMap.set("In","India")
+myMap.set("Fr","France")
+myMap.set("Aus","Australia")
+// console.log(myMap)
+
+for(const [key,value] of myMap)
+{
+    // console.log(key , ":-" , value)
+
+
+}
+
+
+const myarray = [1,2,3,4,5]
+
+for (const i of myarray) {
+    console.log(i)
+    if(i == 2){
+        break
+    }
+}
+
+for(const i of myarray){
+    console.log(i)
+}
