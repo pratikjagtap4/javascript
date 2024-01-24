@@ -1,4 +1,4 @@
-"use strict"
+// "use strict"
 const name = "swapnil"
 const user = {
     name:"pratik",
@@ -23,7 +23,7 @@ function add(){
     // console.log(name);
     // console.log(this);
 }
-add()
+// add()
 
 // ********************** Arrow Function *********************
 let addTwo = (num1,num2) => {
@@ -39,7 +39,7 @@ let addNum = (num1,num2) => (num1+num2)  //exclusive arrow function (as it does 
 let fun = (name) => {
     // console.log(this.name)
 }
-fun("pratik")
+// fun("pratik")
 
 const laptop1 = {
     cpu:"i9",
@@ -93,7 +93,7 @@ const user4 ={
 
 }
 
-user4.greet();
+// user4.greet();
 
 function fun2(){
     const myName  = {
@@ -105,10 +105,60 @@ function fun2(){
     };
     myName.fun()
 }
-fun2()
-fun2()
+// fun2()
+// fun2()
 
 
 // ************************************** This Keyword******************
 
-console.log(this)
+// console.log(this)
+
+// function sum (){
+//     // console.log(this)
+// }
+
+const user8 = {
+    name : "pratik",
+    sum: function(){
+        console.log("line 4",this);
+
+        function add(){ 
+            console.log("line 6",this)
+            nestedArrow = () =>{
+                console.log("new nested arrow line 8 ",this)
+
+            }
+            nestedArrow()
+        }
+        con = () => {
+            console.log("line no 13",this);
+            innerArrow = () =>{
+                console.log("line no 15",this);
+
+            }
+        }
+        add();
+        con();
+        innerArrow()
+    },
+    arrowfun : ()=>{
+        console.log("line no 24",this)
+    }
+}
+user8.sum()
+user8.arrowfun()
+
+
+arrow = () => {
+    console.log(this)
+}
+arrow()
+
+function itsnotfun (){
+    arrow = () => {
+        console.log("iner arrow" , this)
+    }
+    arrow()
+}
+// arrow()
+itsnotfun()
