@@ -1,4 +1,4 @@
-# project 1
+# project 1 Color Picker
 
 ``` javascript
 const body = document.querySelector('body');
@@ -10,7 +10,7 @@ button.forEach(function (button) {
 });
 ```
 
-# project 2
+# project 2 BMI Calculator
 
 ``` javascript
 const form =document.querySelector("form")
@@ -44,4 +44,15 @@ const form =document.querySelector("form")
         }
 
     })
+```
+
+# project 3 Digital Clock
+
+``` javascript
+  const clock = document.querySelector("#clock")
+    
+    const timer = setInterval(function(){
+        const date = new Date();
+        clock.innerHTML = date.toLocaleTimeString()
+    },1000)
 ```
