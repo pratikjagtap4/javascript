@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="content">Hello world</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const content = document.querySelector("#content")
+    const stopBtn = document.querySelector("#stop")
+
+    const changeText = function(){
+        content.innerHTML  = "Wekcome To The JS Series"
+    }
+    const changeColor = function(){
+        document.body.style.backgroundColor = "grey"
+    }
+
+    const changeBg = setTimeout(changeColor,2000)
+    const changeMe = setTimeout(changeText,2000)
+
+    stopBtn.addEventListener("click",function(){
+        clearTimeout(changeMe)
+        clearTimeout(changeBg)
+    })
+
+    const myArr = [1,2,3]
+    myArr.myMethod = function (sProperty) {
+    console.log(arguments.length > 0 ? this[sProperty] : this);
+    };
+
+    // myArr.myMethod(); // prints "zero,one,two"
+    // myArr.myMethod(1);
+    setTimeout(myArr.myMethod, 1000, "[1,2,3]") 
+
+</script>
+</html>
