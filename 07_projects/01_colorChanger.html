@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .canvas {
+            margin: 100px auto 100px;
+            width: 80%;
+            text-align: center;
+        }
+
+        .button {
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            display: inline-block;
+        }
+
+        #grey{
+            background-color: grey;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #blue{
+            background-color: blue;
+        }
+        #purple{
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="canvas">
+        <h1>Color Changer</h1>
+        <span class="button" id="grey"></span>
+        <span class="button" id="blue"></span>
+        <span class="button" id="yellow"></span>
+        <span class="button" id="purple"></span>
+    </div>
+</body>
+
+<script>
+    const body =document.querySelector("body");
+    const button =document.querySelectorAll(".button");
+
+    button.forEach(function(btn){
+        btn.addEventListener("click",function(event){
+            body.style.backgroundColor = event.target.id;
+        });
+    });
+</script>
+
+</html>
