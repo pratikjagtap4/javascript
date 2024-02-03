@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <p id="date"></p>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const date = document.querySelector("#date")
+    const stop = document.querySelector("#stop")
+    const start = document.querySelector("#start")
+
+    const sayDate = function(){
+        const myDate = new Date()
+        date.innerHTML = myDate.toLocaleString()
+        date.innerHTML = Date.now()
+    }
+    
+    let showDate
+    start.addEventListener("click",function(){
+        showDate = setInterval(sayDate, 1000)
+        console.log(showDate)
+
+    })
+
+    stop.addEventListener("click",function(){
+        clearInterval(showDate
+        )
+    })
+
+    const one = setTimeout(() => {
+        console.log("five")
+        console.log(one)
+    }, 5000);
+    console.log(one)
+
+    const two = setTimeout(() => {
+        console.log("four")
+    }, 4000);
+    console.log(two)
+
+
+    const three = setTimeout(() => {
+        console.log("three")
+    }, 3000);
+    console.log(three)
+
+
+    const four = setTimeout(() => {
+        console.log("two")
+    }, 2000);
+    console.log(four)
+
+
+    const five= setTimeout(() => {
+        console.log("one")
+    }, 10000);
+    console.log(five)
+</script>
+</html>
