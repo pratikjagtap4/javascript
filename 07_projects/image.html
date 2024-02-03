@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="image">
+
+    </div>
+    <button id="btn">Open</button>
+</body>
+<script>
+    const button = document.querySelector("#btn")
+
+    const box = document.querySelector(".image")
+    
+    const photo = document.createElement("img")
+    photo.setAttribute("src","DSC_0738.JPG")
+
+    button.addEventListener("click",function(event){
+        if(box.children.length ==0){
+            box.appendChild(photo)
+            button.innerText = "Close"
+        }else{
+            photo.remove()
+            button.innerText = "Open"
+        }
+    })
+
+    
+</script>
+</html>

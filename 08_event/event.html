@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn2{
+            position: relative;
+            top: 400px;
+            left: 600px;
+        }
+        ul li{
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p id="para"></p>
+    <button id="btn">Click me</button>
+
+    <p id="myPara">helllo</p>
+    <div>
+
+        <button id="btn2">click me!!!!!!!!</button>
+    </div>
+
+    <!-- propogarion -->
+    <div class="list">
+        <ul class="unorderList">
+            <li class="list-item" id="mango">Mnago</li>
+            <li class="list-item" id="apple">Apple</li>
+            <li class="list-item" id="orange">Orange</li>
+            <li class="list-item" id="banana">Banana</li>
+        </ul>
+    </div>
+</body>
+<script>
+    const mypara = document.querySelector("#myPara")
+    const button2 = document.querySelector("#btn2")
+
+    button2.onclick = function (event){
+        console.log(event.target)
+        console.log(event)
+        console.log(event["altkey"])
+        console.log(event.timeStamp)
+        console.log(event.clientX)
+        console.log(event.clientY)
+        console.log(event.type)
+        console.log(event.currentTarget)
+        console.log(event.srcElement.parentElement)
+        mypara.innerText= "this is new para"
+    }
+
+    function changePara(event){
+        document.querySelector("#myPara")
+    }
+    
+    const para =document.querySelector("#para")
+    const button =document.querySelector("#btn")
+
+    button.addEventListener("click",function(e){
+        para.innerHTML = "Hello World"
+    })
+
+// event propogation
+     const div = document.querySelector(".list")
+     const ul = document.querySelector(".unorderList")
+     const orange = document.querySelector("#orange")
+
+    //  div.addEventListener("click",function(event){
+    //     console.log("div is clicked")
+    //  })
+     ul.addEventListener("click",function(event){
+        console.log("ul is clicked")
+        event.stopPropagation()
+     })
+     orange.addEventListener("click",function(event){
+        console.log("orange is clicked")
+        // event.stopPropagation()
+     },true)
+
+</script>
+</html>
