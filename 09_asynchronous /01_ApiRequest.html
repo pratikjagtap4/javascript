@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+        <style>
+            .buttons{
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+            .card{
+                margin: 20px 0 0 40px;
+            }
+            #followers{
+                font-size: 18px;
+                position: relative;
+                left: 150px;
+            }
+        </style>
+</head>
+
+<body>
+    <div class="card shadow" style="width: 18rem;">
+        <img src="..." class="card-img-top rounded-pill" alt="...">
+        <span id="followers">followers</span>
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <div class="buttons">
+
+                <a href="#" class="btn btn-primary youtube">Youtube </a>
+                <a href="#" class="btn btn-primary github">Github</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    const username = document.querySelector(".card-title")
+    const bio = document.querySelector(".card-text")
+    const youtube = document.querySelector(".youtube")
+    const github = document.querySelector(".github")
+    const image = document.querySelector(".card-img-top")
+    const followers = document.querySelector("#followers")
+
+    const requestUrl = "https://api.github.com/users/hiteshchoudhary"
+    const xhr = new XMLHttpRequest()
+    
+    xhr.open("GET" ,requestUrl)
+
+    xhr.onreadystatechange = function (){
+        
+        if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText)
+            console.log(data)
+
+            username.innerHTML = data.name
+            bio.innerHTML = data.bio
+            youtube.setAttribute("href" , data.blog)
+            github.setAttribute("href" , data.html_url)
+            image.setAttribute("src" , data.avatar_url)
+            followers.innerHTML = `followers : ${data.followers}`
+        }
+    }
+    xhr.send()
+</script>
+
+</html>
