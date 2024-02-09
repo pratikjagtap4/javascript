@@ -98,7 +98,7 @@ Object.defineProperties(object1 , {
 });
 object1.property1 = 46
 object1.property3 = 50
-// console.log(object1.property1)
+console.log(object1.property1)
 delete object1.property3
 // console.log(object1)
 
@@ -173,3 +173,24 @@ childObj.childProp ="hello i am property of child"
 // console.log(Object.hasOwn(childObj,"prop1"))
 // console.log(Object.hasOwn(childObj,"inheritedprop"))
 // console.log(Object.hasOwn(childObj,"childProp"))
+
+
+
+// ************************* loosely coupling of object *************
+
+const myobj1 = {
+    username:"pratik",
+    myobj2 : {
+        getusername: (userObj)=>{
+            console.log(`${userObj.username}`)
+        }
+    }
+}
+
+const myobj3 = {
+    username:"jagtap"
+}
+
+// myobj1.myobj2.getusername(myobj3)
+
+
