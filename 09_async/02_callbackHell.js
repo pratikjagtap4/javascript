@@ -10,4 +10,10 @@ function getVal(data,getNextVal ){
     }, 2000);
 }
 
-getVal(3)
+getVal(3,()=>{
+    getVal(4,()=>{
+        getVal(5,()=>{
+            console.log("callBack Hell")
+        })
+    })
+})
