@@ -2,9 +2,9 @@ function addition(num1, num2){
     console.log(num1+num2)
 }
 
-// addition.power = 10;
-// addition.lavda = 80
-// addition.lasan = 75
+addition.prototype.power = 10;
+addition.lavda = 80
+addition.lasan = 75
 // console.log(addition(4,5))
 // console.log(addition.power)
 // console.log(addition.lasan)
@@ -13,15 +13,21 @@ function addition(num1, num2){
 // console.log(addition.hasOwnProperty("power"))  //  here addition which is originally a function is treated as  a object and bancho is treated as its property  
 
 console.log(addition.prototype)
+
 addition.prototype.username = function(){
     this.name= "pratik"
 }
 addition.prototype.hellopratik = function(){
     console.log(`Hello ${this.name}`)
+    console.log(`Hello ${this.power}`)
 }
+
 console.log(addition.prototype)
+
+
 const hellobro = new addition(4,5)
 
+hellobro.username()
 hellobro.hellopratik()
 
 function createUser(pName , price){

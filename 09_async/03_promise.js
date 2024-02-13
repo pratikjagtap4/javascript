@@ -115,14 +115,21 @@ const uname = promiseFour.then(function (user) {
     // }
 
     // getAllUsers()
-
+console.log("hello")
+setTimeout(()=>{
+ 
+    console.log("hello world")
+},500)
 
 const data = fetch('https://jsonplaceholder.typicode.com/users')
 
-data.then((response)=>{
+data
+.then((response)=>{
     return response.json()
-}).then((data)=>{
+})
+.then((data)=>{
     console.log(data)
-}).catch((error)=>{
+})
+.catch((error)=>{
     console.log("E:" , error)
 })

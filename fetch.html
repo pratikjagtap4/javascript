@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    async function fetchAndDecode(url) {
+    const res = await fetch(url);
+    if (!res.ok) {
+      throw new Error(`HTTP error! status: ${res.status}`);
+    }
+    const data = await res.blob();
+    return data;
+  }
+  
+//   const coldDrink = fetchAndDecode("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRuqCgc9hUjvmonqhf7y7yhHMillVO50nAEQ&usqp=CAU")
+  const coffee = fetchAndDecode("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXqknC2OtF_E_CU-bu1k2jehqHc2p0guBgVQ&usqp=CAU");
+  const tea = fetchAndDecode("https://images.immediate.co.uk/production/volatile/sites/30/2020/08/flat-white-3402c4f.jpg?quality=90&resize=500,454");
+//   const juice = fetchAndDecode("")
+  Promise.any([coffee , tea ])
+    .then((blob) => {
+      const objectURL = URL.createObjectURL(blob);
+      const image = document.createElement("img");
+      image.src = objectURL;
+      document.body.appendChild(image);
+      const variable = 3
+      console.log(this.variable)
+    })
+    .catch((e) => {
+      console.error(e);
+    });
+
+
+
+</script>
+</html>
