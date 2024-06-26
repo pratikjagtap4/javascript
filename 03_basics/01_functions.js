@@ -57,11 +57,12 @@ function handleObject(anyobject){
 
 // console.log(handleObject(user));
 
-const factorial = function (num){
-    return num<2 ? 1:num*factorial(num-1)
+const factorial = function fac (num){
+    return num<2 ? 1:num*fac(num-1)
 }
 // console.log(factorial(5))
-
+// the name fac is local name of function and it is accessible only within scope of function, 
+//outside function we can not acces the using function using local name i.e fac
 // **********************************
 
 // function outside(x) {
